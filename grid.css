@@ -3,12 +3,37 @@ body{
     font-family: 'helvetica';
 }
 
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    color: black;
+    padding: 0;
+}
+
+img {
+    width: 40%;
+}
+
+article {
+    display: grid;
+    background: whitesmoke;
+    /* padding: 1rem 1.2rem; */
+    padding: 5rem;
+}
+
 .two_box_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
- 
-    /*Här styr vi layouten på sidan*/
     grid-template-areas:
         "areaOne          content_text_1"
         "content_text_2     content_2"
@@ -18,138 +43,74 @@ body{
         "content_text_6     content_6"
 }
 
-p{
-    font-size: 16px;
-    font-weight: bold;
-}
 .text{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-ul {
-    list-style-type: none;
-    color: black;
-    padding: 0;
-}
-
-article {
+.areaOne {
     grid-area: areaOne;
-    display: grid;
-    background: whitesmoke;
-    padding: 1rem 1.2rem;
     border: solid pink 1rem;  
 }
 
 .content_text_1 {
     grid-area: content_text_1;
-    display: grid;
-    background: whitesmoke;
-    padding: 1rem;
-    /* font-family: 'helvetica';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px; */
     border: solid red 1rem;  
 }
 
 .content_2 {
     grid-area: content_2;
-    width: auto;
-    display: flex;
-    flex-grow: 1;
+    border: solid black 1rem;  
 }
 
 .content_text_2 {
     grid-area: content_text_2;
-    display: grid;
-    background: whitesmoke;
-    padding: 5rem;
-    padding: 5rem;
-    font-family: 'helvetica';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px;
     border: solid #5553ec 1rem; 
 }
 
 .content_3 {
     grid-area: content_3;
+    border: solid #5553ec 1rem; 
 }
 
 .content_text_3 {
     grid-area: content_text_3;
-    display: grid;
-    background: whitesmoke;
-    padding: 5rem;
-    padding: 5rem;
-    font-family: 'helvetica';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px;
     border: solid #5553ec 1rem; 
 }
 
 .content_4{
     grid-area: content_4;
-    width: auto;
-    display: flex;
-    flex-grow: 1;
+    border: solid #5553ec 1rem; 
 }
 
 .content_text_4 {
     grid-area: content_text_4;
-    display: grid;
-    background: whitesmoke;
-    padding: 5rem;
-    padding: 5rem;
-    font-family: 'helvetica';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px;
     border: solid #5553ec 1rem; 
 }
 
 
 .content_5 {
     grid-area: content_5;
+    border: solid #5553ec 1rem; 
 }
 
 .content_text_5 {
     grid-area: content_text_5;
-    display: grid;
-    background: whitesmoke;
-    padding: 5rem;
-    padding: 5rem;
-    
-    font-family: 'helvetica';
-    font-size: 22px;
     border: solid #5553ec 1rem; 
 }
 
 .content_6 {
     grid-area: content_6;
-    width: auto;
-    display: flex;
-    flex-grow: 1;
+    border: solid #5553ec 1rem; 
 }
 
 .content_text_6 {
     grid-area: content_text_6;
-    display: grid;
-    background: whitesmoke;
-    padding: 5rem;
-    padding: 5rem;
-    font-family: 'helvetica';
-    font-weight: bold;
-    
-    text-transform: uppercase;
-    font-size: 22px;
     border: solid #5553ec 1rem; 
 }
 
-button{
+/* button{
     padding:0.6rem;
     margin-top:1rem;
     border: none;
@@ -161,7 +122,7 @@ button{
 
 button:focus{
     outline: none;
-}
+} */
 
 @media only screen and (max-width: 1100px) {
     .two_box_grid {
@@ -175,11 +136,17 @@ button:focus{
         display: flex;
         flex-direction: column;
     }
-    button{
-        padding:0.5rem;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
     }
 }
 @media only screen and (max-width: 450px) {
+    img {
+        width: 100%;
+    }
     .areaOne {
         padding: 1rem 1.5rem 2rem;
     }
@@ -221,7 +188,7 @@ button:focus{
     }
   }
   
-  .flik{
+  /* .flik{
     position: absolute;
     bottom: 1;
     top: 0;
@@ -230,7 +197,7 @@ button:focus{
     font-weight: bold;
     padding: 1rem 1.5rem;
     font-family: 'helvetica';
-  }
+  } */
   
   .next{
     background: #ffdd00;
