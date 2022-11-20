@@ -6,6 +6,24 @@ body{
 header {
     display: flex;
     justify-content: space-around;
+    border-bottom: solid black 1rem;  
+}
+
+.instagram {
+      margin-bottom:0;
+      width: 10%;
+      margin-top: 0;
+      padding: 20px 1rem;
+}
+
+footer {
+    text-align: center;
+    background-color: silver;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 p{
@@ -35,12 +53,12 @@ article {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
     grid-template-areas:
-        "areaOne          content_text_1"
-        "content_text_2     content_2"
-        "content_3          content_text_3"
-        "content_text_4     content_4"
-        "content_5          content_text_5"
-        "content_text_6     content_6"
+        "left_text     right_text"
+        "left_text     right_text"
+        "left_text     right_text"
+        "left_text     right_text"
+        "left_text     right_text"
+        "last_left_text     last_right_text"
 }
 
 .text{
@@ -49,80 +67,31 @@ article {
     flex-wrap: wrap;
 }
 
-.areaOne {
-    grid-area: areaOne;
-    border: solid pink 1rem;  
-}
-
-.content_text_1 {
-    grid-area: content_text_1;
-    border: solid red 1rem;  
-}
-
-.content_2 {
-    grid-area: content_2;
+.leftText {
+    grid-area: left_text;
     border: solid black 1rem;  
+    border-top: none;
 }
 
-.content_text_2 {
-    grid-area: content_text_2;
-    border: solid #5553ec 1rem; 
+.rightText {
+    grid-area: right_text;
+    border: solid black 1rem;
+    border-top: none;
+    border-left: none;  
 }
 
-.content_3 {
-    grid-area: content_3;
-    border: solid #5553ec 1rem; 
+.lastLeftText {
+    grid-area: last_left_text;
+    border: solid black 1rem;  
+    border-top: none; 
 }
 
-.content_text_3 {
-    grid-area: content_text_3;
-    border: solid #5553ec 1rem; 
+.lastRightText {
+    grid-area: last_right_text;
+    border: solid black 1rem;  
+    border-top: none;
+    border-left: none;  
 }
-
-.content_4{
-    grid-area: content_4;
-    border: solid #5553ec 1rem; 
-}
-
-.content_text_4 {
-    grid-area: content_text_4;
-    border: solid #5553ec 1rem; 
-}
-
-
-.content_5 {
-    grid-area: content_5;
-    border: solid #5553ec 1rem; 
-}
-
-.content_text_5 {
-    grid-area: content_text_5;
-    border: solid #5553ec 1rem; 
-}
-
-.content_6 {
-    grid-area: content_6;
-    border: solid #5553ec 1rem; 
-}
-
-.content_text_6 {
-    grid-area: content_text_6;
-    border: solid #5553ec 1rem; 
-}
-
-/* button{
-    padding:0.6rem;
-    margin-top:1rem;
-    border: none;
-    font-family: 'helvetica';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 22px; 
-}
-
-button:focus{
-    outline: none;
-} */
 
 @media only screen and (max-width: 1100px) {
     .two_box_grid {
@@ -142,33 +111,44 @@ button:focus{
         flex-direction: column;
         padding: 1rem;
     }
+
+    footer > a {
+        border: solid black 1rem;
+        border-top: none;
+  
+  }
 }
 @media only screen and (max-width: 450px) {
     img {
         width: 100%;
     }
-    .areaOne {
+    
+    article {
         padding: 1rem 1.5rem 2rem;
     }
- 
-    .content_text_1 {
-        padding: 1rem 1.5rem 2rem;
+
+    .instagram {
+        width: 30%;
     }
- 
-    .content_text_2 {
-        padding: 1rem 1.5rem 2rem;
+
+    .leftText {
+        grid-area: left_text;
+        border: solid black 1rem;  
+        border-top: none;  
+        border-bottom: none; 
     }
-    .content_text_3 {
-        padding: 1rem 1.5rem 2rem;
+    
+    .rightText {
+        grid-area: right_text;
+        border: solid black 1rem;  
+        /* border-bottom: none;   */
     }
-    .content_text_4{
-        padding: 1rem 1.5rem 2rem;
-    }
-    .content_text_5 {
-        padding: 1rem 1.5rem 2rem;
-    }
-    .content_text_6 {
-        padding: 1rem 1.5rem 2rem;
+
+    .lastRightText {
+        grid-area: right_text;
+        border: solid black 1rem;  
+        border-top: none;  
+        background-color: #ffdd00;
     }
 } 
 
@@ -187,17 +167,6 @@ button:focus{
         background: #5553ec;
     }
   }
-  
-  /* .flik{
-    position: absolute;
-    bottom: 1;
-    top: 0;
-    left: 0;
-    right: 1;
-    font-weight: bold;
-    padding: 1rem 1.5rem;
-    font-family: 'helvetica';
-  } */
   
   .next{
     background: #ffdd00;
