@@ -34,7 +34,7 @@ p{
 ul {
     list-style-type: none;
     color: black;
-    padding: 0;
+    padding: 0 20px;
 }
 
 img {
@@ -111,12 +111,6 @@ article {
         flex-direction: column;
         padding: 1rem;
     }
-
-    footer > a {
-        border: solid black 1rem;
-        border-top: none;
-  
-  }
 }
 @media only screen and (max-width: 450px) {
     img {
