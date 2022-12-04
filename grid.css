@@ -20,11 +20,6 @@ header {
       padding: 20px 1rem;
 }
 
-.logo {
-    width: 45%;
-    object-fit: scale-down;
-    padding-right: 15px;
-}
 
 .logo {
     width: 15%;
@@ -177,6 +172,14 @@ article {
 @media only screen and (max-width: 450px) {
     img {
         width: 100%;
+    }
+    .logo {
+        width: 30%;
+        padding: 1rem;
+    }
+
+    footer {
+        height: 100%;
     }
     
     article {
