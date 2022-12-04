@@ -61,6 +61,7 @@ li {
 footer {
     text-align: center;
     background-color:  #c1cdb8;
+    height: 100vh;
     /* background-color:  #5553ec; */
 }
 
